@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+
+img{
+    display: block;
+    opacity: 1;
+    -webkit-transform: scale(1,1);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 550ms;
+    -moz-transform: scale(1,1);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 550ms;
+}
+img:hover {
+    opacity: .9;
+    -webkit-transform: scale(1.11,1.17);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 550ms;
+    -moz-transform: scale(1.11,1.17);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 550ms;
+}
