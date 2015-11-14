@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :projects
+
   root 'pages#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
