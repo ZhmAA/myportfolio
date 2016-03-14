@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  before_action :authenticate_admin!, except: [:index, :show]
   
   def index
     @projects = Project.all.reverse
