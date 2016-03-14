@@ -6,20 +6,26 @@
 				<!-- One -->
 					<section id="about_me">
 						<header class="major">
-							<h2>Обо мне</h2>
+							<h2>About me</h2>
 						</header>
 						<p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia.</p>
 						<ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
+							<li><a href="#" class="button">Learn more</a></li>
 						</ul>
 					</section>
 
 				<!-- Two -->
 					<section id="portfolio">
-						<h2>Мои работы</h2>
+						<h2>Portfolio</h2>
 						<div class="row">
 							<article class="6u 12u$(xsmall) work-item">
-								<a href="images/02.jpg" class="image fit thumb"><img src="images/02.jpg" alt="" /></a>
+								<div class="image-holder">
+									<div class="link-holder">
+										<a href="" class="image fit image-btn__view" style="outline: 0px;">View</a>
+										<a href="" class="fit image-btn__src" style="outline: 0px;">Link</a>
+									</div>
+									<a href="images/02.jpg" class="image fit thumb"><img src="images/02.jpg" alt="" title=""></a>
+								</div>
 								<h3>Magna sed consequat tempus</h3>
 								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 							</article>
@@ -50,23 +56,17 @@
 							</article>
 						</div>
 						<ul class="actions">
-							<li><a href="#" class="button">Full Portfolio</a></li>
+							<li><a href="/projects" class="button">Full Portfolio</a></li>
 						</ul>
 					</section>
 
 				<!-- Three -->
 					<section id="contact">
-						<h2>Связаться со мной</h2>
+						<h2>Contacts</h2>
 						<p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
 						<div class="row">
 							<div class="8u 12u$(small)">
-								<form method="post" action="#">
-									<div class="row uniform 50%">
-										<div class="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="Name" /></div>
-										<div class="6u$ 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Email" /></div>
-										<div class="12u$"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
-									</div>
-								</form>
+								<%= render 'shared/form' %>
 								<ul class="actions">
 									<li><input type="submit" value="Send Message" /></li>
 								</ul>

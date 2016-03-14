@@ -1,12 +1,17 @@
 				<div id="main">	
 					<section id="portfolio">
-						<h2>Мои работы</h2>
+						<h2>Portfolio</h2>
 						<div class="row">
 							<article class="6u 12u$(xsmall) work-item">
 								<% @projects.each do |project| %>
   									<p><%= project.name %></p>
   									<p><%= project.description %></p>
   									<p></p>
+  									<%= link_to 'Show', project_path(project) %>
+							        <%= link_to 'Edit', edit_project_path(project) %>
+  	                                <%= link_to 'Destroy', project_path(project),
+                                                   method: :delete,
+                                                   data: { confirm: 'Are you sure?' } %>
   								<% end %>
 							</article>
 						</div>
