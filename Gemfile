@@ -37,6 +37,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #Form construct
 gem 'simple_form'
 
+#Upload images
+gem 'carrierwave'
+gem 'mini_magick'
+gem "fog"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

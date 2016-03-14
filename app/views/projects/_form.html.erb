@@ -1,5 +1,8 @@
-<%= simple_form_for @project do |f| %>
+<%= simple_form_for @project, :html => {:multipart => true} do |f| %>
   <%= f.input :name, label: 'Project Name' %>
   <%= f.input :description, label: 'Project Descrription' %>
+  <%= image_tag(@project.image_url) if @project.image? %>
+  <%= f.file_field :image %>
+  <%= f.hidden_field :image_cache %>
   <%= f.button :submit %>
 <% end %>
