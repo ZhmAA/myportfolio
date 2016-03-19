@@ -116,3 +116,12 @@
       opacity: 1;
       color: #fff !important;
     }
+
+/*Contact us form field*/
+.hidden {
+  display: none;
+}
+
+label {
+  display: none;
+}
