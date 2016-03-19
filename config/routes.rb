@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   
+  devise_scope :admin do
+    get "/admins/sign_up",  :to => redirect("/")
+  end
+  devise_for :admins
+  
   resources :projects
 
   root 'pages#index'
