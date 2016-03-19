@@ -45,6 +45,9 @@ gem "fog"
 #For Authentification admin
 gem 'devise'
 
+#Contact us form
+gem 'mail_form'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
