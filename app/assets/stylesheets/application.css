@@ -14,7 +14,28 @@
  *= require_self
  */
 
-.work-item .image-holder {
+
+img {
+    display: block;
+    opacity: 1;
+    -webkit-transform: scale(1,1);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 450ms;
+    -moz-transform: scale(1,1);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 450ms;
+}
+img:hover {
+    opacity: .9;
+    -webkit-transform: scale(1.07,1.13);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 450ms;
+    -moz-transform: scale(1.07,1.13);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 450ms;
+}
+
+/*.work-item .image-holder {
     display: block;
     opacity: 1;
     -webkit-transform: scale(1,1);
@@ -32,7 +53,7 @@
     -moz-transform: scale(1.07,1.13);
     -moz-transition-timing-function: ease-out;
     -moz-transition-duration: 450ms;
-}
+}*/
 
 /* Work Item */
 

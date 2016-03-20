@@ -15,42 +15,19 @@
 					<section id="portfolio">
 						<h2>Portfolio</h2>
 						<div class="row">
+						  <% @projects.each do |project| %>
 							<article class="6u 12u$(xsmall) work-item">
 								<div class="image-holder">
 									<div class="link-holder">
-										<a href="" class="image fit image-btn__view" style="outline: 0px;">View</a>
-										<a href="" class="fit image-btn__src" style="outline: 0px;">Link</a>
+										<%= link_to 'Link', project.projecturl, :class => 'fit image-btn__src' %>
+										<%= link_to 'Details', project_path(project), :class => 'fit image-btn__src' %>
 									</div>
-									<a href="images/02.jpg" class="image fit thumb"><img src="images/02.jpg" alt="" title=""></a>
+									<a href="images/02.jpg" class="image fit thumb"><%= image_tag project.image.thumb.url %></a>
 								</div>
-								<h3>Magna sed consequat tempus</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+								<h3><%= project.name %></h3>
+								<p><%= project.description %></p>
 							</article>
-							<article class="6u$ 12u$(xsmall) work-item">
-								<a href="images/02.jpg" class="image fit thumb"><img src="images/02.jpg" alt="" /></a>
-								<h3>Ultricies lacinia interdum</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="6u 12u$(xsmall) work-item">
-								<a href="images/03.jpg" class="image fit thumb"><img src="images/03.jpg" alt="" /></a>
-								<h3>Tortor metus commodo</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="6u$ 12u$(xsmall) work-item">
-								<a href="images/04.jpg" class="image fit thumb"><img src="images/04.jpg" alt="" /></a>
-								<h3>Quam neque phasellus</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="6u 12u$(xsmall) work-item">
-								<a href="images/03.jpg" class="image fit thumb"><img src="images/03.jpg" alt="" /></a>
-								<h3>Nunc enim commodo aliquet</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="6u$ 12u$(xsmall) work-item">
-								<a href="images/04.jpg" class="image fit thumb"><img src="images/04.jpg" alt="" /></a>
-								<h3>Risus ornare lacinia</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
+						  <% end %>
 						</div>
 						<ul class="actions">
 							<li><a href="/projects" class="button">Full Portfolio</a></li>
