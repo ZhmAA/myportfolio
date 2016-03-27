@@ -1,0 +1,19 @@
+%section#portfolio
+  %h2 Portfolio
+  .row
+    - @projects.each do |project|
+      %article.6u.work-item{:class => "12u$(xsmall)"}
+        .image-holder
+          .link-holder
+            = link_to 'Link', project.projecturl, :class => 'fit image-btn__src'
+            = link_to 'Details', project_path(project), :class => 'fit image-btn__src'
+          %a.image.fit.thumb{:href => "images/02.jpg"}= image_tag project.image.thumb.url
+        %h3= project.name
+        %p= project.description.split[0..30].join(' ').html_safe
+        = link_to 'Show', project_path(project)
+        - if admin_signed_in?
+          = link_to 'Edit', edit_project_path(project)
+          = link_to 'Destroy', project_path(project), |
+            method: :delete,                          |
+            data: { confirm: 'Are you sure?' }        |
+  = will_paginate @projects, previous_label: "Previous", next_label: "Next", inner_window: 1, outer_window: 0

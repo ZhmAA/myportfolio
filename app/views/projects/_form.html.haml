@@ -1,0 +1,8 @@
+= simple_form_for @project, :html => {:multipart => true} do |f|
+  = f.input :name, label: 'Project Name'
+  = f.input :description, as: :ckeditor, input_html: { :ckeditor => {:toolbar => 'Full'} }, label: 'Project Descrription'
+  = f.input :projecturl, label: 'Project URL'
+  = image_tag(@project.image_url) if @project.image?
+  = f.file_field :image
+  = f.hidden_field :image_cache
+  = f.button :submit
