@@ -2,7 +2,7 @@ class ProjectsController < ApplicationController
   before_action :authenticate_admin!, except: [:index, :show]
   
   def index
-    @projects = Project.all.reverse
+    @projects = Project.all.reverse.paginate(:page => params[:page], :per_page => 10)
   end
 
   def show
