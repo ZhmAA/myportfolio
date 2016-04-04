@@ -1,0 +1,10 @@
+.box.alt
+  .row.uniform{:class => "50%"}
+    %div{:class => "12u$"}
+      %span.image.fit
+        = image_tag @project.image.thumb.url
+%h1= @project.name
+%ul.actions
+  %li
+    %a.button.special{:href => @project.projecturl } Link to site
+%p= @project.description.html_safe

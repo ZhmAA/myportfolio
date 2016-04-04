@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  mount Ckeditor::Engine => '/ckeditor'
+  
   devise_scope :admin do
     get "/admins/sign_up",  :to => redirect("/")
   end
@@ -10,6 +12,7 @@ Rails.application.routes.draw do
   resources :contacts, only: [:new, :create]
 
   root 'pages#index'
+  get 'about', to: 'pages#aboutme'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

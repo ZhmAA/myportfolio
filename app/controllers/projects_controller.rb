@@ -2,7 +2,7 @@ class ProjectsController < ApplicationController
   before_action :authenticate_admin!, except: [:index, :show]
   
   def index
-    @projects = Project.all.reverse
+    @projects = Project.all.reverse.paginate(:page => params[:page], :per_page => 10)
   end
 
   def show
@@ -47,7 +47,7 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:name, :description, :image)
+    params.require(:project).permit(:name, :description, :image, :projecturl)
   end
 
 end
