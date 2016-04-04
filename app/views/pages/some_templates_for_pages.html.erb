@@ -1,69 +1,15 @@
-		<!-- Header -->
-		
-				<!-- One -->
-					<section id="about_me">
-						<header class="major">
-							<h2>About me</h2>
-						</header>
-						<p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia.</p>
-						<ul class="actions">
-							<li><a href="/about" class="button">Learn more</a></li>
-						</ul>
-					</section>
-
-				<!-- Two -->
-					<section id="portfolio">
-						<h2>Portfolio</h2>
-						<div class="row">
-						  <% @projects.each do |project| %>
-							<article class="6u 12u$(xsmall) work-item">
-								<div class="image-holder">
-									<div class="link-holder">
-										<%= link_to 'Link', project.projecturl, :class => 'fit image-btn__src' %>
-										<%= link_to 'Details', project_path(project), :class => 'fit image-btn__src' %>
-									</div>
-									<a href="images/02.jpg" class="image fit thumb"><%= image_tag project.image.thumb.url %></a>
-								</div>
-								<h3><%= project.name %></h3>
-								<p><%= project.description.split[0..20].join(' ') %></p>
-							</article>
-						  <% end %>
-						</div>
-						<ul class="actions">
-							<li><a href="/projects" class="button">Full Portfolio</a></li>
-						</ul>
-					</section>
-
-				<!-- Three -->
-					<section id="contact">
-						<h2>Contacts</h2>
-						<p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
-						<div class="row">
-							<div class="8u 12u$(small)">
-								<%= render 'contacts/form' %>
-							</div>
-							<div class="4u$ 12u$(small)">
-								<ul class="labeled-icons">
-									<li>
-										<h3 class="icon fa-home"><span class="label">Address</span></h3>
-										1234 Somewhere Rd.<br />
-										Nashville, TN 00000<br />
-										United States
-									</li>
-									<li>
-										<h3 class="icon fa-mobile"><span class="label">Phone</span></h3>
-										000-000-0000
-									</li>
-									<li>
-										<h3 class="icon fa-envelope-o"><span class="label">Email</span></h3>
-										<a href="#">hello@untitled.tld</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</section>
-
-				<!-- Four -->
+.box.alt
+  .row.uniform{:class => "50%"}   
+    .4u
+      %span.image.fit
+        %img{:alt => "", :src => "/images/04.jpg"}/
+    .4u
+      %span.image.fit
+        %img{:alt => "", :src => "/images/03.jpg"}/
+    %div{:class => "4u$"}
+      %span.image.fit
+        %img{:alt => "", :src => "/images/04.jpg"}/
+    <!-- Four -->
 				<!--
 					<section id="four">
 						<h2>Elements</h2>
@@ -382,6 +328,3 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 					</section>
 				-->
-
-		<!-- Footer -->
-			

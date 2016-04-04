@@ -1,0 +1,47 @@
+/ Header
+/ One
+%section#about_me
+  %header.major
+    %h2 About me
+  %p Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia.
+  %ul.actions
+    %li
+      %a.button.special{:href => "/about"} Learn more
+/ Two
+%section#portfolio
+  %h2 Portfolio
+  .row
+    - @projects.each do |project|
+      %article.6u.work-item{:class => "12u$(xsmall)"}
+        .image-holder
+          .link-holder
+            = link_to 'Link', project.projecturl, :class => 'fit image-btn__src'
+            = link_to 'Details', project_path(project), :class => 'fit image-btn__src'
+          %a.image.fit.thumb{:href => "images/02.jpg"}= image_tag project.image.thumb.url
+        %h3= project.name
+        %p= project.description.split[0..20].join(' ').html_safe
+  %ul.actions
+    %li
+      %a.button.special{:href => "/projects"} Full Portfolio
+/ Three
+%section#contact
+  %h2 Contacts
+  %p You can contact me in any way you like :)
+  .row
+    .8u{:class => "12u$(small)"}
+      = render 'contacts/form'
+    %div{:class => "4u$ 12u$(small)"}
+      %ul.labeled-icons
+        %li
+          %h3.icon.fa-home
+            %span.label Address
+          Ukraine, Kiev
+        %li
+          %h3.icon.fa-skype
+            %span.label Skype
+          %a{:href => "skype:andzhm91?chat"} andzhm91
+        %li
+          %h3.icon.fa-envelope-o
+            %span.label Email
+          %a{:href => "andzhm@ukr.net"} andzhm@ukr.net
+/ Footer
