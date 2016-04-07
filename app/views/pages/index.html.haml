@@ -9,7 +9,8 @@
       %a.button.special{:href => "/about"} Learn more
 / Two
 %section#portfolio
-  %h2 Portfolio
+  %header.major
+    %h2 Portfolio
   .row
     - @projects.each do |project|
       %article.6u.work-item{:class => "12u$(xsmall)"}
@@ -25,7 +26,8 @@
       %a.button.special{:href => "/projects"} Full Portfolio
 / Three
 %section#contact
-  %h2 Contacts
+  %header.major
+    %h2 Contacts
   %p You can contact me in any way you like :)
   .row
     .8u{:class => "12u$(small)"}

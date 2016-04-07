@@ -26,11 +26,11 @@ img {
     -moz-transition-duration: 450ms;
 }
 img:hover {
-    opacity: .9;
-    -webkit-transform: scale(1.07,1.13);
+    opacity: .95;
+    -webkit-transform: scale(1.05,1.05);
     -webkit-transition-timing-function: ease-out;
     -webkit-transition-duration: 450ms;
-    -moz-transform: scale(1.07,1.13);
+    -moz-transform: scale(1.05,1.05);
     -moz-transition-timing-function: ease-out;
     -moz-transition-duration: 450ms;
 }
