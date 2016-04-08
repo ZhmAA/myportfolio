@@ -188,3 +188,9 @@ label {
         cursor: default;
         z-index: 2;
     }
+
+/*header title*/
+
+#head_title {
+  display: block;
+}    
