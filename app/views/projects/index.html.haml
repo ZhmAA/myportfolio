@@ -9,7 +9,8 @@
             = link_to 'Link', project.projecturl, :class => 'fit image-btn__src'
             = link_to 'Details', project_path(project), :class => 'fit image-btn__src'
           %a.image.fit.thumb{:href => "images/02.jpg"}= image_tag project.image.thumb.url
-        %h3= project.name
+        %h3
+          = link_to project.name, project_path(project)
         %p= project.description.split[0..30].join(' ').html_safe
         - if admin_signed_in?
           = link_to 'Edit', edit_project_path(project)
