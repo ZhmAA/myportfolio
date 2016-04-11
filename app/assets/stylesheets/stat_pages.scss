@@ -98,6 +98,7 @@
 	h1 {
 		font-size: 2em;
 		line-height: 1.5em;
+		margin-top: 10px;
 	}
 
 	h2 {
@@ -942,7 +943,7 @@
 					text-decoration: none;
 					outline: 0;
 					border: 0;
-					width: 140px;
+					width: 150px;
 					line-height: 28px;
 					@include vendor('transition', 'none');
 

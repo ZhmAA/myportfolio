@@ -12,11 +12,11 @@
   %nav#nav
     %ul
       %li
-        %a#about_me-link.skel-layers-ignoreHref{:href => "#about_me"}
+        = link_to root_path(anchor: 'about_me'), id: "about_me-link", :class => "skel-layers-ignoreHref" do
           %span.icon.fa-user About Me
       %li
-        %a#portfolio-link.skel-layers-ignoreHref{:href => "#portfolio"}
+        = link_to root_path(anchor: 'portfolio'), id: "portfolio-link", :class => "skel-layers-ignoreHref" do
           %span.icon.fa-th Portfolio
       %li
-        %a#contact-link.skel-layers-ignoreHref{:href => "#contact"}
+        = link_to root_path(anchor: 'contact'), id: "contact-link", :class => "skel-layers-ignoreHref" do
           %span.icon.fa-envelope Contacts
