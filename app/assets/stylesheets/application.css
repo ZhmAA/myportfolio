@@ -120,7 +120,7 @@ img:hover {
       margin: 0 5%;
       border: solid 3px rgba(74, 113, 140, 0.7);
       border-radius: 0.35em;
-      color: #fff;
+      color: #4a718c;
       font-size: 0.9em;
       font-weight: 400;
       line-height: 2.25em;
@@ -135,7 +135,7 @@ img:hover {
 
     .work-item .link-holder a:hover {
       opacity: 1;
-      color: #4a718c !important;
+      color: #fff !important;
     }
 
 /*Contact us form field*/
