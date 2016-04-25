@@ -9,6 +9,21 @@
   		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   		<%= csrf_meta_tags %>
+
+  		<% if current_page?(root_path) %>
+  		  <script>
+          //anchor scroll
+            $(document).ready(function(){
+            $('#nav').on('click', 'a', function (event) {
+              event.preventDefault();
+              var id = $(this).attr('href').replace('/', ''),
+              top = $(id).offset().top;
+            $('body,html').animate({scrollTop: top}, 500);
+              });
+            });
+  		  </script>
+  		<% end %>
+
 	</head>
 
 	<body id="top">

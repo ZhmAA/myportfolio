@@ -59,6 +59,7 @@ img:hover {
 
     .work-item .image-holder {
       position: relative;
+      margin-bottom: 20px;
     }
 
     .work-item .image-holder:before {
@@ -70,7 +71,7 @@ img:hover {
       width: 100%;
       height: 100%;
       border-radius: 0.35em;
-      background: url("images/overlay.png");
+      background: url("/images/overlay.png");
       z-index: 2;
       opacity: 0;
       -moz-transition: opacity 0.2s ease-in-out;
@@ -89,7 +90,6 @@ img:hover {
       height: auto;
       border-radius: 0.35em;
       display: block;
-      padding-bottom: 20px;
     }
 
     .work-item .image-holder:hover .link-holder {
@@ -118,9 +118,9 @@ img:hover {
       width: auto;
       padding: 0 1.5em;
       margin: 0 5%;
-      border: solid 3px rgba(74, 113, 140, 0.7);
+      border: solid 3px rgba(250, 250, 250, 0.5);
       border-radius: 0.35em;
-      color: #4a718c;
+      color: #fff;
       font-size: 0.9em;
       font-weight: 400;
       line-height: 2.25em;
