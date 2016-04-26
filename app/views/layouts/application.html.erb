@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html>
 	<head>
-  		<title>MyPortfolio</title>
-  		<meta charset="utf-8" />
+  	<title>Andrey Zhmaylo | Ruby on Rails</title>
+  	<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	
-  		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  		<%= csrf_meta_tags %>
+  	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  	<%= csrf_meta_tags %>
+    
+    <%= favicon_link_tag 'favicon.ico' %>
 
-  		<% if current_page?(root_path) %>
-  		  <script>
-          //anchor scroll
-            $(document).ready(function(){
-            $('#nav').on('click', 'a', function (event) {
-              event.preventDefault();
-              var id = $(this).attr('href').replace('/', ''),
-              top = $(id).offset().top;
-            $('body,html').animate({scrollTop: top}, 500);
-              });
+  	<% if current_page?(root_path) %>
+  	  <script>
+        //anchor scroll
+          $(document).ready(function(){
+          $('#nav').on('click', 'a', function (event) {
+            event.preventDefault();
+            var id = $(this).attr('href').replace('/', ''),
+            top = $(id).offset().top;
+          $('body,html').animate({scrollTop: top}, 500);
             });
-  		  </script>
-  		<% end %>
-
-	</head>
+          });
+  	  </script>
+  	<% end %>
+  </head>
 
 	<body id="top">
 
@@ -33,16 +33,16 @@
 
 		<div id="main">
 		  <p class="notice"><%= notice %></p>
-          <p class="alert"><%= alert %></p>
+      <p class="alert"><%= alert %></p>
 
-          <% if admin_signed_in? %>
-            <%= link_to "Sign_out", destroy_admin_session_path, :method => :delete %>
-          <% end %>
+        <% if admin_signed_in? %>
+          <%= link_to "Sign_out", destroy_admin_session_path, :method => :delete %>
+        <% end %>
 
 		  <%= yield %>
 
-        </div>
+    </div>
 	<!-- Footer -->
-    	<%= render 'shared/footer' %>
+    <%= render 'shared/footer' %>
 	</body>
 </html>

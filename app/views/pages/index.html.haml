@@ -21,7 +21,7 @@
           %a.image.fit.thumb{:href => "images/02.jpg"}= image_tag project.image.thumb.url
         %h3
           = link_to project.name, project_path(project)
-        %p= project.description.split[0..20].join(' ').html_safe
+        %p= project.description.split[0..5].join(' ').html_safe
   %ul.actions
     %li
       %a.button.special{:href => "/projects"} Full Portfolio
